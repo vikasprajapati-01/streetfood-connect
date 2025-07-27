@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { collection, getDocs, query, where, limit } from 'firebase/firestore'
+import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore'
 import { db } from '@/lib/firebase'
 import { SupplierDashboardLayout } from '@/components/supplier/layout'
 import { Product, Order } from '@/types'
@@ -48,7 +48,7 @@ export default function SupplierDashboard() {
         {/* Welcome Section */}
         <div className="bg-white rounded-lg shadow-sm p-6">
           <h1 className="text-2xl font-bold mb-2">Welcome back, Supplier!</h1>
-          <p className="text-gray-600">Here's an overview of your business.</p>
+          <p className="text-gray-600">Here&apos;s an overview of your business.</p>
         </div>
         
         {/* Stats Cards */}

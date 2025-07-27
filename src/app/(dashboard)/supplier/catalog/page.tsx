@@ -5,8 +5,7 @@ import {
   PencilIcon,
   TrashIcon,
   EyeIcon,
-  FunnelIcon,
-  PhotoIcon
+  FunnelIcon
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 

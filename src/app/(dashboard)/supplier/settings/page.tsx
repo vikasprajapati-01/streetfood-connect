@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { SupplierDashboardLayout } from '@/components/supplier/layout'
 import { 
-  UserIcon, 
   ShieldCheckIcon, 
   BellIcon,
   CreditCardIcon,

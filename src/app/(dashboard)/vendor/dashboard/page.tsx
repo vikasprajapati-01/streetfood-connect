@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { collection, getDocs, query, where, limit } from 'firebase/firestore'
+import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore'
 import { db } from '@/lib/firebase'
 import { VendorDashboardLayout } from '@/components/vendor/layout'
 import { Product, Order, Supplier } from '@/types'
@@ -57,7 +57,7 @@ export default function VendorDashboard() {
         {/* Welcome Section */}
         <div className="bg-white rounded-lg shadow-sm p-6">
           <h1 className="text-2xl font-bold mb-2">Welcome back, Vendor!</h1>
-          <p className="text-gray-600">Here's what's happening with your business today.</p>
+          <p className="text-gray-600">Here&apos;s what&apos;s happening with your business today.</p>
         </div>
         
         {/* Stats Cards */}

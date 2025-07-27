@@ -2,11 +2,11 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import { SupplierDashboardLayout } from '@/components/supplier/layout'
 import { 
   PhotoIcon,
-  XMarkIcon,
-  PlusIcon
+  XMarkIcon
 } from '@heroicons/react/24/outline'
 
 export default function AddProduct() {
@@ -281,9 +281,11 @@ export default function AddProduct() {
                     <div className="grid grid-cols-2 gap-2">
                       {images.map((image, index) => (
                         <div key={index} className="relative">
-                          <img
+                          <Image
                             src={image}
                             alt={`Product ${index + 1}`}
+                            width={100}
+                            height={96}
                             className="w-full h-24 object-cover rounded-lg"
                           />
                           <button
