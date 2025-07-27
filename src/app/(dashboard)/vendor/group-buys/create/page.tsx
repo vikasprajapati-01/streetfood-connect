@@ -1,3 +1,5 @@
+'use client'
+
 import { VendorDashboardLayout } from '@/components/vendor/layout'
 import Link from 'next/link'
 import { useState } from 'react'
