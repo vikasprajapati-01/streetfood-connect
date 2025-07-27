@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { 
   MagnifyingGlassIcon,
   MapPinIcon,
-  StarIcon,
   ShoppingBagIcon,
   HeartIcon,
   ChatBubbleLeftRightIcon,

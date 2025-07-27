@@ -9,14 +9,10 @@ import {
   ShoppingBagIcon, 
   BuildingStorefrontIcon,
   UserGroupIcon,
-  UsersIcon,
   ClipboardDocumentListIcon,
   Cog6ToothIcon,
   ArrowRightOnRectangleIcon,
   Bars3Icon,
-  ChartBarIcon,
-  PlusIcon,
-  ArchiveBoxIcon,
   XMarkIcon
 } from '@heroicons/react/24/outline'
 
@@ -27,7 +23,7 @@ interface VendorDashboardLayoutProps {
 export function VendorDashboardLayout({ children }: VendorDashboardLayoutProps) {
   const pathname = usePathname()
   const router = useRouter()
-  const { user, logout } = useAuth()
+  const { logout } = useAuth()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const handleLogout = async () => {
     try {
@@ -40,14 +36,10 @@ export function VendorDashboardLayout({ children }: VendorDashboardLayoutProps) 
   
   const navigation = [
     { name: 'Dashboard', href: '/vendor/dashboard', icon: HomeIcon },
-    { name: 'Analytics', href: '/vendor/analytics', icon: ChartBarIcon },
     { name: 'Products', href: '/vendor/products', icon: ShoppingBagIcon },
-    { name: 'Add Product', href: '/vendor/products/add', icon: PlusIcon },
-    { name: 'Product Catalog', href: '/vendor/products/catalog', icon: ArchiveBoxIcon },
     { name: 'Suppliers', href: '/vendor/suppliers', icon: BuildingStorefrontIcon },
     { name: 'Group Buys', href: '/vendor/group-buys', icon: UserGroupIcon },
     { name: 'Orders', href: '/vendor/orders', icon: ClipboardDocumentListIcon },
-    { name: 'Customers', href: '/vendor/customers', icon: UsersIcon },
     { name: 'Settings', href: '/vendor/settings', icon: Cog6ToothIcon },
   ]
   

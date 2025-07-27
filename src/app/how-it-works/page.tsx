@@ -6,7 +6,6 @@ import {
   ClipboardDocumentListIcon,
   UserGroupIcon,
   TruckIcon,
-  CreditCardIcon,
   StarIcon,
   ShieldCheckIcon,
   ChartBarIcon

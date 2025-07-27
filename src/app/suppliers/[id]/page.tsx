@@ -3,7 +3,6 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { 
   MapPinIcon,
-  StarIcon,
   ShoppingBagIcon,
   TruckIcon,
   CheckBadgeIcon,
@@ -15,7 +14,7 @@ import {
   HeartIcon,
   ShareIcon
 } from '@heroicons/react/24/outline'
-import { StarIcon as StarIconSolid, HeartIcon as HeartIconSolid } from '@heroicons/react/24/solid'
+import { StarIcon as StarIconSolid } from '@heroicons/react/24/solid'
 
 export default function SupplierProfile({ params }: { params: { id: string } }) {
   // Mock data for the supplier - in real app, this would be fetched based on params.id

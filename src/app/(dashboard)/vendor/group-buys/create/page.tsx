@@ -6,11 +6,6 @@ import { useState } from 'react'
 import { 
   ArrowLeftIcon,
   MagnifyingGlassIcon,
-  CalendarIcon,
-  MapPinIcon,
-  UserGroupIcon,
-  CurrencyRupeeIcon,
-  ClockIcon,
   InformationCircleIcon,
   PlusIcon,
   TrashIcon

@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -33,8 +32,7 @@ export default function Login() {
     setError('')
     
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, data.email, data.password)
-      const user = userCredential.user
+      await signInWithEmailAndPassword(auth, data.email, data.password)
       
       // Redirect based on user role (would be stored in user profile)
       // For demo, redirecting to vendor dashboard

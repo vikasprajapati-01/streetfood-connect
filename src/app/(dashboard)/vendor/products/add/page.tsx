@@ -65,14 +65,13 @@ export default function AddProduct() {
   })
 
   const watchedTags = watch('tags') || []
-  const watchedInStock = watch('inStock')
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
     if (files) {
       // In a real app, you would upload to a storage service
       // For now, we'll create mock URLs
-      const newImages = Array.from(files).map((file, index) => 
+      const newImages = Array.from(files).map((file) => 
         URL.createObjectURL(file)
       )
       setImages(prev => [...prev, ...newImages])

@@ -8,7 +8,6 @@ import {
   MapPinIcon, 
   PhoneIcon, 
   EnvelopeIcon,
-  ClockIcon,
   ChatBubbleLeftRightIcon,
   QuestionMarkCircleIcon
 } from '@heroicons/react/24/outline'

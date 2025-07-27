@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore'
+import { collection, getDocs, query, limit } from 'firebase/firestore'
 import { db } from '@/lib/firebase'
 import { SupplierDashboardLayout } from '@/components/supplier/layout'
 import { Product, Order } from '@/types'

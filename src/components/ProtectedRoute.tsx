@@ -6,10 +6,9 @@ import { useAuth } from '@/contexts/AuthContext'
 
 interface ProtectedRouteProps {
   children: ReactNode
-  requiredRole?: 'vendor' | 'supplier'
 }
 
-export const ProtectedRoute = ({ children, requiredRole }: ProtectedRouteProps) => {
+export const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   const { user, loading } = useAuth()
   const router = useRouter()
 

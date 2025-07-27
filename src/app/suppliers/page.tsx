@@ -4,9 +4,7 @@ import { Footer } from '@/components/footer'
 import { 
   MagnifyingGlassIcon,
   MapPinIcon,
-  StarIcon,
   ShoppingBagIcon,
-  TruckIcon,
   CheckBadgeIcon,
   AdjustmentsHorizontalIcon,
   ClockIcon
