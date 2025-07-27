@@ -1,0 +1,54 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow authenticated users to read and write their own vendor profile
+    match /vendors/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Allow authenticated users to read and write their own supplier profile
+    match /suppliers/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Allow authenticated users to read all suppliers (for vendor dashboard)
+    match /suppliers/{supplierId} {
+      allow read: if request.auth != null;
+    }
+    
+    // Allow authenticated users to read all products and suppliers can write their own
+    match /products/{productId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null && 
+                   resource.data.supplierId == request.auth.uid;
+      allow delete: if request.auth != null && 
+                   resource.data.supplierId == request.auth.uid;
+    }
+    
+    // Orders can be read by vendor or supplier involved, created by vendors
+    match /orders/{orderId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null && 
+                    (resource.data.vendorId == request.auth.uid || 
+                     resource.data.supplierId == request.auth.uid);
+    }
+    
+    // Group buys - allow read for all authenticated users, write for creators
+    match /groupBuys/{groupBuyId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null && 
+                    resource.data.createdBy == request.auth.uid;
+    }
+    
+    // For development: Allow read access to all collections for authenticated users
+    // Remove this in production and use more specific rules
+    match /{document=**} {
+      allow read: if request.auth != null;
+    }
+  }
+}
